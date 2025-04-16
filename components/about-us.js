@@ -15,11 +15,11 @@ export default function AboutUs() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#374151]">
               Simplifying Coverage at{' '}
-              <span className="text-[#539ECF]">Actnow4family</span>
+              <span className="text-[#0C99D5]">Actnow4family</span>
             </h2>
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-[#539ECF]">
+                <h3 className="text-xl font-semibold mb-2 text-[#0C99D5]">
                   Our Mission
                 </h3>
                 <p className="text-[#374151]">
@@ -67,11 +67,11 @@ export default function AboutUs() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#374151]">
-              Core Values of <span className="text-[#539ECF]">Actnow4family</span>
+              Core Values of <span className="text-[#0C99D5]">Actnow4family</span>
             </h2>
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-[#539ECF]">
+                <h3 className="text-xl font-semibold mb-2 text-[#0C99D5]">
                   What We Stand For
                 </h3>
                 <p className="text-[#374151]">
@@ -79,11 +79,11 @@ export default function AboutUs() {
                   We believe in:
                 </p>
                 <ul className="list-disc list-inside text-[#374151] mt-4 space-y-2">
-                  <li><span className="text-[#539ECF] font-semibold">Transparency:</span> Clear and honest communication with every policyholder.</li>
-                  <li><span className="text-[#539ECF] font-semibold">Reliability:</span> Delivering consistent and trustworthy insurance solutions.</li>
-                  <li><span className="text-[#539ECF] font-semibold">Customer-Centric Approach:</span> Putting families and businesses first with tailored coverage options.</li>
-                  <li><span className="text-[#539ECF] font-semibold">Innovation:</span> Leveraging the latest technology to simplify the insurance process.</li>
-                  <li><span className="text-[#539ECF] font-semibold">Empowerment:</span> Providing knowledge and tools so clients make informed decisions about their coverage.</li>
+                  <li><span className="text-[#0C99D5] font-semibold">Transparency:</span> Clear and honest communication with every policyholder.</li>
+                  <li><span className="text-[#0C99D5] font-semibold">Reliability:</span> Delivering consistent and trustworthy insurance solutions.</li>
+                  <li><span className="text-[#0C99D5] font-semibold">Customer-Centric Approach:</span> Putting families and businesses first with tailored coverage options.</li>
+                  <li><span className="text-[#0C99D5] font-semibold">Innovation:</span> Leveraging the latest technology to simplify the insurance process.</li>
+                  <li><span className="text-[#0C99D5] font-semibold">Empowerment:</span> Providing knowledge and tools so clients make informed decisions about their coverage.</li>
                 </ul>
               </div>
             </div>

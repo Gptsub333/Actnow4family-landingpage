@@ -49,7 +49,7 @@ export default function ContactForm() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#374151]">
-            Get <span className="text-[#7FBEEB]">Insured Today</span>
+            Get <span className="text-[#0C99D5]">Insured Today</span>
           </h2>
           <p className="text-[#374151]">
             Fill out the form below to get in touch with one of our experts and find the best insurance coverage for your needs.
@@ -145,7 +145,7 @@ export default function ContactForm() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="bg-[#7FBEEB] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#A5C9EA] transition-colors"
+              className="bg-[#0C99D5] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#A5C9EA] transition-colors"
               disabled={loading} // Disable button while loading
             >
               {loading ? 'Submitting...' : 'Submit'} {/* Show loading text */}

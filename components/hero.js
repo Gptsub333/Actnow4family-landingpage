@@ -90,7 +90,7 @@ export default function Hero() {
             >
               <Link
                 href={slide.link}
-                className="bg-[#539ECF] hover:bg-[#7FBEEB] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition"
+                className="bg-[#0C99D5] hover:bg-[#7FBEEB] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition"
               >
                 Learn More
               </Link>
@@ -102,14 +102,14 @@ export default function Hero() {
       {/* Navigation Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#539ECF] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#0C99D5] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#539ECF] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#0C99D5] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6" />

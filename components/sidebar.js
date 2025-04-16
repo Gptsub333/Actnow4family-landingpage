@@ -35,13 +35,15 @@ export default function Sidebar() {
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Branding */}
+          <div className="flex justify-between items-center h-32">  {/* Increased height */}
+            {/* Branding with Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
-                <span className="text-3xl text-[#539ECF] font-bold tracking-wide bg-gradient-to-r from-[#539ECF] to-[#6CB3D8] bg-clip-text text-transparent font-[Open Sans] drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-                  Actnow<span className="text-[#7FBEEB]">4family</span>
-                </span>
+              <Link href="/" className="flex  items-center">
+                <img
+                  src="/images/canva2.png"  // Adjust path if needed
+                  alt="ActNow4Family Logo"
+                  className="h-32 sm:h-40 pt-2"  // Increased logo size for better visibility
+                />
               </Link>
             </div>
 
@@ -51,14 +53,14 @@ export default function Sidebar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-[#374151] hover:text-[#539ECF] transition-colors text-sm font-medium"
+                  className="text-[#374151] hover:text-[#0C99D5] transition-colors text-sm font-medium"
                 >
                   {item.name}
                 </Link>
               ))}
               <Link
                 href="#contact"
-                className="bg-[#539ECF] text-white px-6 py-2 rounded-full hover:bg-[#7FBEEB] transition shadow-lg font-medium"
+                className="bg-[#0C99D5] text-white px-6 py-2 rounded-full hover:bg-[#7FBEEB] transition shadow-lg font-medium"
               >
                 Book a call
               </Link>
@@ -95,9 +97,11 @@ export default function Sidebar() {
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
-                  <span className="text-xl font-bold bg-gradient-to-r from-[#7FBEEB] to-[#A5C9EA] bg-clip-text text-transparent">
-                    Actnow4family
-                  </span>
+                  <img
+                    src="/images/ActNow_Logo-1.png"  // Adjust path if needed
+                    alt="ActNow4Family Logo"
+                    className="h-16 sm:h-20"  // Adjust the logo size for mobile if needed
+                  />
                   <button
                     onClick={() => setIsOpen(false)}
                     className="p-2 rounded-lg hover:bg-[#E1EFFA] transition-colors"
@@ -135,7 +139,7 @@ export default function Sidebar() {
                   <Link
                     href="#contact"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center w-full bg-[#539ECF] text-white px-6 py-3 rounded-full hover:bg-[#6CB3D8] transition font-medium"
+                    className="flex items-center justify-center w-full bg-[#0C99D5] text-white px-6 py-3 rounded-full hover:bg-[#6CB3D8] transition font-medium"
                   >
                     Book a call
                   </Link>
