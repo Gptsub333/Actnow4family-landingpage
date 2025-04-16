@@ -29,7 +29,6 @@ const slides = [
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Automatically move to the next slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -62,10 +61,10 @@ export default function Hero() {
             style={{ backgroundImage: `url(${slide.image})` }}
           ></div>
 
-          {/* Gradient Overlay for smooth transition */}
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-900/80 via-yellow-700/60 to-transparent"></div>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#A5C9EA]/80 via-[#7FBEEB]/60 to-transparent"></div>
 
-          {/* Text & Content */}
+          {/* Text & CTA */}
           <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-20 lg:px-32 text-white">
             <motion.h1
               initial={{ opacity: 0, x: -50 }}
@@ -91,7 +90,7 @@ export default function Hero() {
             >
               <Link
                 href={slide.link}
-                className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition"
+                className="bg-[#539ECF] hover:bg-[#7FBEEB] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition"
               >
                 Learn More
               </Link>
@@ -100,17 +99,17 @@ export default function Hero() {
         </motion.div>
       ))}
 
-      {/* Navigation Arrows */}
+      {/* Navigation Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-yellow-600 text-white p-3 rounded-full hover:bg-yellow-700 shadow-lg transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#539ECF] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-yellow-600 text-white p-3 rounded-full hover:bg-yellow-700 shadow-lg transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#539ECF] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6" />

@@ -5,33 +5,6 @@ import Link from 'next/link';
 
 const conditions = [
   {
-    title: 'Comprehensive Health Insurance',
-    description: [
-      'We provide tailored health insurance solutions designed to cover medical expenses and ensure peace of mind.',
-      'Our plans cater to individuals, families, and businesses, ensuring top-tier healthcare access.',
-    ],
-    image: '/images/services/CHI.webp',
-    href: '#contact',
-  },
-  {
-    title: 'Auto Insurance for Every Journey',
-    description: [
-      'Protect your vehicle and yourself with our customizable auto insurance plans.',
-      'We offer accident coverage, liability protection, and flexible premiums to fit your needs.',
-    ],
-    image: '/images/services/AIJ.webp',
-    href: '#contact',
-  },
-  {
-    title: 'Homeowners & Property Insurance',
-    description: [
-      'Safeguard your home and property with policies that protect against unexpected events.',
-      'Coverage includes theft, fire, natural disasters, and liability protection for homeowners and renters.',
-    ],
-    image: '/images/services/PI.webp',
-    href: '#contact',
-  },
-  {
     title: 'Life Insurance for a Secure Future',
     description: [
       'Ensure financial stability for your loved ones with our flexible life insurance plans.',
@@ -80,17 +53,17 @@ const conditions = [
 
 export default function ConditionsGrid() {
   return (
-    <section className="py-16 bg-gray-50" id="conditions">
+    <section className="py-16 bg-[#F0F4F8]" id="conditions">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center text-yellow-800 mb-12"
+          className="text-3xl md:text-4xl font-bold text-center text-[#7FBEEB] mb-12"
         >
           Explore Our Coverage Plans
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 justify-center sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {conditions.map((condition, index) => (
             <motion.div
               key={condition.title}
@@ -109,16 +82,16 @@ export default function ConditionsGrid() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-black-900">
+                  <h3 className="text-lg font-semibold text-[#374151]">
                     {condition.title}
                   </h3>
                 </div>
               </div>
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-white bg-opacity-98 p-4 rounded-2xl shadow-md scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-10">
-                <h3 className="text-xl font-bold text-black mb-4 text-center">
+                <h3 className="text-xl font-bold text-[#374151] mb-4 text-center">
                   {condition.title}
                 </h3>
-                <ul className="list-disc list-inside text-sm text-gray-700 text-left">
+                <ul className="list-disc list-inside text-sm text-[#374151] text-left">
                   {condition.description.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}

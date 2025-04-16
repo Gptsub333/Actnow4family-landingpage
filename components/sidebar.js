@@ -29,20 +29,19 @@ export default function Sidebar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/30 backdrop-blur-md shadow-md' // More opacity for better contrast
-            : 'bg-white/50 backdrop-blur-lg' // Lightly transparent background
-        }`}
+        className={`fixed w-full z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/30 backdrop-blur-md shadow-md'
+          : 'bg-white/50 backdrop-blur-lg'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Branding - Updated for Better Visibility */}
+            {/* Branding */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
-              <span className="text-3xl font-bold text-yellow-800 tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] font-[Open Sans]">
-                Actnow<span className="text-yellow-600">4family</span>
-              </span>
+                <span className="text-3xl text-[#539ECF] font-bold tracking-wide bg-gradient-to-r from-[#539ECF] to-[#6CB3D8] bg-clip-text text-transparent font-[Open Sans] drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+                  Actnow<span className="text-[#7FBEEB]">4family</span>
+                </span>
               </Link>
             </div>
 
@@ -52,23 +51,23 @@ export default function Sidebar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-900 hover:text-yellow-600 transition-colors text-sm font-medium"
+                  className="text-[#374151] hover:text-[#539ECF] transition-colors text-sm font-medium"
                 >
                   {item.name}
                 </Link>
               ))}
               <Link
                 href="#contact"
-                className="bg-yellow-600 text-white px-6 py-2 rounded-full hover:bg-yellow-700 transition shadow-lg font-medium"
+                className="bg-[#539ECF] text-white px-6 py-2 rounded-full hover:bg-[#7FBEEB] transition shadow-lg font-medium"
               >
-                Get a Quote
+                Book a call
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-gray-900 p-2"
+              className="md:hidden text-[#374151] p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -80,7 +79,6 @@ export default function Sidebar() {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -88,23 +86,21 @@ export default function Sidebar() {
               onClick={() => setIsOpen(false)}
               className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 md:hidden"
             />
-
-            {/* Sidebar */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed inset-y-0 right-0 w-[280px] bg-white/80 backdrop-blur-md shadow-xl z-50 md:hidden"
+              className="fixed inset-y-0 right-0 w-[280px] bg-[#F0F4F8]/90 backdrop-blur-md shadow-xl z-50 md:hidden"
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
-                  <span className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent">
+                  <span className="text-xl font-bold bg-gradient-to-r from-[#7FBEEB] to-[#A5C9EA] bg-clip-text text-transparent">
                     Actnow4family
                   </span>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="p-2 rounded-lg hover:bg-[#E1EFFA] transition-colors"
                     aria-label="Close menu"
                   >
                     <X size={20} />
@@ -123,26 +119,27 @@ export default function Sidebar() {
                       >
                         <Link
                           href={item.href}
-                          className="flex items-center justify-between p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                          className="flex items-center justify-between p-3 rounded-lg text-[#374151] hover:bg-[#E1EFFA] transition-colors"
                           onClick={() => setIsOpen(false)}
                         >
                           <span className="font-medium">{item.name}</span>
-                          <ChevronRight size={18} className="text-gray-400" />
+                          <ChevronRight size={18} className="text-[#A5C9EA]" />
                         </Link>
                       </motion.div>
                     ))}
                   </div>
                 </div>
 
-                {/* Mobile Get a Quote Button */}
+                {/* CTA Button */}
                 <div className="p-4 border-t">
                   <Link
                     href="#contact"
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center w-full bg-yellow-600 text-white px-6 py-3 rounded-full hover:bg-yellow-700 transition font-medium"
+                    className="flex items-center justify-center w-full bg-[#539ECF] text-white px-6 py-3 rounded-full hover:bg-[#6CB3D8] transition font-medium"
                   >
-                    Get a Quote
+                    Book a call
                   </Link>
+
                 </div>
               </div>
             </motion.div>
