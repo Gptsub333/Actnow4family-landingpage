@@ -1,119 +1,202 @@
-'use client';
+"use client"
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Link from 'next/link';
+import { useEffect, useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Shield, Heart, Clock, ArrowRight } from "lucide-react"
+import { cn } from "@/lib/utils"
 
-const slides = [
-  {
-    title: 'Welcome to Actnow4family',
-    description: 'Providing secure and comprehensive insurance plans that protect your future and ensure peace of mind.',
-    image: '/images/carousel/Slide1.jpg',
-    link: '#conditions',
-  },
-  {
-    title: 'Insurance Solutions Tailored for You',
-    description: 'From health and auto to homeowners and life insurance, we customize plans that meet your unique needs.',
-    image: '/images/carousel/Slide2.jpg',
-    link: '#conditions',
-  },
-  {
-    title: 'Reliable Coverage, Anytime & Anywhere',
-    description: 'Our experts offer virtual consultations to help you choose the right insurance plans with clarity and confidence.',
-    image: '/images/carousel/Slide3.jpg',
-    link: '#conditions',
-  },
-];
-
-export default function Hero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function HeroSection() {
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
-  };
+    setIsLoaded(true)
+  }, [])
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      {slides.map((slide, index) => (
-        <motion.div
-          key={index}
-          className="absolute w-full h-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: index === currentIndex ? 1 : 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-        >
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center w-full h-full"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          ></div>
+    <section className="bg-[#F0F4F8] min-h-[90vh] relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white to-[#F0F4F8] -z-10"></div>
 
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#A5C9EA]/80 via-[#7FBEEB]/60 to-transparent"></div>
-
-          {/* Text & CTA */}
-          <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-20 lg:px-32 text-white">
-            <motion.h1
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl font-bold leading-tight mb-4"
-            >
-              {slide.title}
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-lg md:text-xl max-w-2xl"
-            >
-              {slide.description}
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.7 }}
-              className="mt-6"
-            >
-              <Link
-                href={slide.link}
-                className="bg-[#0C99D5] hover:bg-[#7FBEEB] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition"
-              >
-                Learn More
-              </Link>
-            </motion.div>
+      {/* Logo watermark - fixed and centered */}
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
+        <div className={cn("transition-all duration-1000 ease-out", isLoaded ? "opacity-5" : "opacity-0")}>
+          <div className="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px]">
+            <Image
+              src="/images/logo-transparent.png"
+              alt="ActNow4Family Logo Watermark"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-        </motion.div>
-      ))}
+        </div>
+      </div>
 
-      {/* Navigation Buttons */}
-      <button
-        onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#0C99D5] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
-        aria-label="Previous Slide"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#0C99D5] text-white p-3 rounded-full hover:bg-[#7FBEEB] shadow-lg transition"
-        aria-label="Next Slide"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-    </div>
-  );
+      {/* Integrated navigation bar */}
+      <div className="container mx-auto px-4 md:px-6 pt-6 relative z-10">
+        <div className="flex items-center justify-between">
+          {/* Logo - increased size */}
+          <div className="relative w-[100px] h-[100px] md:w-[150px] md:h-[150px] transition-all duration-300 hover:scale-105">
+            <Image
+              src="/images/logo-transparent.png"
+              alt="ActNow4Family Logo"
+              fill
+              className="object-contain drop-shadow-md"
+              priority
+            />
+          </div>
+
+          {/* Navigation Links - aligned with image below */}
+          <div className="hidden md:flex items-center justify-end lg:w-1/2 pr-4 md:pr-6">
+            <div className="flex justify-between space-x-6 lg:space-x-8">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-[#0C99D5] font-medium transition-colors whitespace-nowrap"
+              >
+                Home
+              </Link>
+              <Link
+                href="#about"
+                className="text-gray-700 hover:text-[#0C99D5] font-medium transition-colors whitespace-nowrap"
+              >
+                About Us
+              </Link>
+              <Link
+                href="#conditions"
+                className="text-gray-700 hover:text-[#0C99D5] font-medium transition-colors whitespace-nowrap"
+              >
+                Coverage Plans
+              </Link>
+              <Link
+                href="#contact"
+                className="text-gray-700 hover:text-[#0C99D5] font-medium transition-colors whitespace-nowrap"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <button className="md:hidden text-gray-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-menu"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 py-8 md:py-12 lg:py-16">
+        {/* Main hero content - side by side layout */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left column - Header text and trust indicators */}
+            <div
+              className={cn(
+                "space-y-6 transition-all duration-700 ease-out delay-100 relative z-10",
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
+              )}
+            >
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                Secure Your Family's Future <span className="text-[#0C99D5]">with Confidence</span>
+              </h1>
+
+              <p className="text-gray-600 text-lg">
+                We provide more than just insurance—we offer peace of mind. Our comprehensive coverage plans protect
+                what matters most to you.
+              </p>
+
+              {/* Trust indicators */}
+              <div className="space-y-4">
+                <p className="text-[#0C99D5] font-medium text-xl">Protecting What Matters Most</p>
+
+                <div className="flex flex-wrap gap-4 md:gap-6">
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-5 w-5 text-[#0C99D5]" />
+                    <span className="text-sm font-medium">100% Secure</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Heart className="h-5 w-5 text-[#0C99D5]" />
+                    <span className="text-sm font-medium">Family First</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-5 w-5 text-[#0C99D5]" />
+                    <span className="text-sm font-medium">24/7 Support</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <Link
+                  href="#contact"
+                  className="bg-[#0C99D5] hover:bg-[#0C99D5]/90 text-white px-6 py-6 h-auto text-base font-medium shadow-md hover:shadow-lg transition-all group rounded-md text-center"
+                >
+                  Book a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4 inline-block transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  href="#conditions"
+                  className="border border-[#0C99D5] text-[#0C99D5] hover:bg-[#0C99D5]/5 px-6 py-6 h-auto text-base font-medium transition-all rounded-md text-center"
+                >
+                  Explore Plans
+                </Link>
+
+              </div>
+            </div>
+
+            {/* Right column - Hero image */}
+            <div
+              className={cn(
+                "relative transition-all duration-700 ease-out delay-300 z-10",
+                isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10",
+              )}
+            >
+              <div className="relative h-[300px] md:h-[400px] lg:h-[480px] rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/family-insurance.jpg"
+                  alt="Family Protection Insurance"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#0C99D5]/30 to-transparent"></div>
+
+                {/* Info card */}
+                <div className="absolute bottom-4 left-4 right-4 md:right-auto md:max-w-[280px] bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-md">
+                  <div className="flex items-start">
+                    <div className="flex-1">
+                      <h3 className="text-[#0C99D5] font-bold text-lg">Family Protection Plan</h3>
+                      <p className="text-gray-700 text-sm mt-1">
+                        Comprehensive coverage designed specifically for families with children
+                      </p>
+                      <Link href='#conditions'>
+                      <div className="mt-3 flex items-center text-sm font-medium text-[#0C99D5]">
+                        Learn more <ArrowRight className="ml-1 h-3 w-3" />
+                      </div>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }

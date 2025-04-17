@@ -118,11 +118,15 @@ export default function ContactForm() {
                 onChange={(e) => setFormState({ ...formState, insuranceType: e.target.value })}
               >
                 <option value="">Select an insurance type</option>
-                <option value="Health Insurance">Health Insurance</option>
-                <option value="Auto Insurance">Auto Insurance</option>
-                <option value="Homeowners Insurance">Homeowners Insurance</option>
-                <option value="Life Insurance">Life Insurance</option>
-                <option value="Business Insurance">Business Insurance</option>
+                <option value="Health Insurance">Estate Planning (Will & Trust)</option>
+                <option value="Auto Insurance">Term Life Insurance</option>
+                <option value="Homeowners Insurance">Indexed Universal Life Insurance</option>
+                <option value="Life Insurance">Children College Planning</option>
+                <option value="Business Insurance">Retirement Planning</option>
+                <option value="Business Insurance">Indexed Annuities</option>
+                <option value="Business Insurance">Health Insurance</option>
+                <option value="Business Insurance">Long Term Care</option>
+                <option value="Business Insurance">Medicare</option>
               </select>
             </div>
           </div>

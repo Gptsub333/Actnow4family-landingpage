@@ -98,7 +98,7 @@ export default function Sidebar() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
                   <img
-                    src="/images/ActNow_Logo-1.png"  // Adjust path if needed
+                    src="/images/canva2.png"  // Adjust path if needed
                     alt="ActNow4Family Logo"
                     className="h-16 sm:h-20"  // Adjust the logo size for mobile if needed
                   />

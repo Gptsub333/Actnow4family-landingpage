@@ -3,53 +3,138 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+// const conditions = [
+//   {
+//     title: 'Life Insurance for a Secure Future',
+//     description: [
+//       'Ensure financial stability for your loved ones with our flexible life insurance plans.',
+//       'We offer term life, whole life, and universal life coverage options to fit your long-term goals.',
+//     ],
+//     image: '/images/services/movement.jpg',
+//     href: '#contact',
+//   },
+//   {
+//     title: 'Business Insurance Solutions',
+//     description: [
+//       'Protect your business with comprehensive insurance tailored for entrepreneurs and corporations.',
+//       'Coverage includes general liability, property protection, and employee benefits.',
+//     ],
+//     image: '/images/services/dementia.jpg',
+//     href: '#contact',
+//   },
+//   {
+//     title: 'Travel Insurance for Stress-Free Trips',
+//     description: [
+//       'Enjoy worry-free travel with coverage for medical emergencies, cancellations, and lost luggage.',
+//       'Our travel insurance policies ensure that you’re protected wherever you go.',
+//     ],
+//     image: '/images/services/ocd.jpg',
+//     href: '#contact',
+//   },
+//   {
+//     title: 'Disability & Income Protection',
+//     description: [
+//       'Secure your income with disability insurance that provides financial support in case of injury or illness.',
+//       'Our plans help cover lost wages so you can focus on recovery.',
+//     ],
+//     image: '/images/services/Amyotrophic Lateral Sclerosis.png',
+//     href: '#contact',
+//   },
+//   {
+//     title: 'A Commitment to Your Security',
+//     description: [
+//       'Actnow4family Insurance is dedicated to delivering trusted, accessible, and affordable insurance coverage.',
+//       'We prioritize customer satisfaction and tailor solutions to fit your unique needs.',
+//     ],
+//     image: '/images/services/other.jpg',
+//     href: '#contact',
+//   },
+// ];
+
 const conditions = [
   {
-    title: 'Life Insurance for a Secure Future',
+    title: 'Estate Planning (Will & Trust)',
     description: [
-      'Ensure financial stability for your loved ones with our flexible life insurance plans.',
-      'We offer term life, whole life, and universal life coverage options to fit your long-term goals.',
+      'Estate planning is an important part of any financial strategy.',
+      'At Nest4Future, we help you develop an effective estate plan to protect your loved ones and your legacy.',
     ],
     image: '/images/services/movement.jpg',
     href: '#contact',
   },
   {
-    title: 'Business Insurance Solutions',
+    title: 'Term Life Insurance',
     description: [
-      'Protect your business with comprehensive insurance tailored for entrepreneurs and corporations.',
-      'Coverage includes general liability, property protection, and employee benefits.',
+      'No-one can predict the future, but we can help you prepare for the unexpected.',
+      'Term life insurance could provide your loved ones with the financial support they need to maintain their lifestyle if you were to pass away unexpectedly.',
     ],
-    image: '/images/services/dementia.jpg',
+    image: '/images/services/movement.jpg',
     href: '#contact',
   },
   {
-    title: 'Travel Insurance for Stress-Free Trips',
+    title: 'Indexed Universal Life Insurance',
     description: [
-      'Enjoy worry-free travel with coverage for medical emergencies, cancellations, and lost luggage.',
-      'Our travel insurance policies ensure that you’re protected wherever you go.',
+      'Indexed universal life (IUL) is a permanent life insurance policy that provides a death benefit and a cash value component.',
+      'IUL policies allow policyholders to grow their cash value through the performance of an equity index like S&P 500, with a zero-floor guarantee.',
     ],
-    image: '/images/services/ocd.jpg',
+    image: '/images/services/movement.jpg',
     href: '#contact',
   },
   {
-    title: 'Disability & Income Protection',
+    title: 'Children College Planning',
     description: [
-      'Secure your income with disability insurance that provides financial support in case of injury or illness.',
-      'Our plans help cover lost wages so you can focus on recovery.',
+      'With education costs rising, finding ways to help our children pay for college is a priority for many of us.',
+      'We provide you with solutions where you are in control of your college funds and can plan to pay for your children’s education.',
+    ],
+    image: '/images/services/movement.jpg',
+    href: '#contact',
+  },
+  {
+    title: 'Retirement Planning',
+    description: [
+      'Our retirement planning advice enables you to understand how much you need to save and how long you need to work.',
+      'We provide insights on tax diversification, balanced portfolios, and guaranteed retirement paychecks to help mitigate potential risks.',
     ],
     image: '/images/services/Amyotrophic Lateral Sclerosis.png',
     href: '#contact',
   },
   {
-    title: 'A Commitment to Your Security',
+    title: 'Indexed Annuities',
     description: [
-      'Actnow4family Insurance is dedicated to delivering trusted, accessible, and affordable insurance coverage.',
-      'We prioritize customer satisfaction and tailor solutions to fit your unique needs.',
+      'A fixed indexed annuity is a tax-deferred, long-term financial vehicle that protects your principal when the market drops.',
+      'It also provides an opportunity for growth and is designed to deliver guaranteed lifetime income, much like a private pension.',
+    ],
+    image: '/images/services/dementia.jpg',
+    href: '#contact',
+  },
+  {
+    title: 'Health Insurance',
+    description: [
+      'Choosing the right Health Insurance plan can be overwhelming with so many options and variables.',
+      'At Nest4Future, we simplify your decision-making and help you find the right health care insurance solution.',
+    ],
+    image: '/images/services/ocd.jpg',
+    href: '#contact',
+  },
+  {
+    title: 'Long Term Care',
+    description: [
+      'Long-term care (LTC) supports individuals who can no longer perform everyday activities independently.',
+      'We help assess the right LTC coverage based on age, cost estimates, and affordability.',
     ],
     image: '/images/services/other.jpg',
     href: '#contact',
   },
+  {
+    title: 'Medicare',
+    description: [
+      'Medicare Advantage plans offer additional benefits beyond Original Medicare.',
+      'We help you choose the right Medicare Advantage or Supplement plan to reduce out-of-pocket expenses.',
+    ],
+    image: '/images/services/dementia.jpg',
+    href: '#contact',
+  },
 ];
+
 
 export default function ConditionsGrid() {
   return (
