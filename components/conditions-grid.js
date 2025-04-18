@@ -58,7 +58,7 @@ const conditions = [
       'Estate planning is an important part of any financial strategy.',
       'At Nest4Future, we help you develop an effective estate plan to protect your loved ones and your legacy.',
     ],
-    image: '/images/services/movement.jpg',
+    image: '/images/services/Estate Planning .jpg',
     href: '#contact',
   },
   {
@@ -67,7 +67,7 @@ const conditions = [
       'No-one can predict the future, but we can help you prepare for the unexpected.',
       'Term life insurance could provide your loved ones with the financial support they need to maintain their lifestyle if you were to pass away unexpectedly.',
     ],
-    image: '/images/services/movement.jpg',
+    image: '/images/services/CHI.webp',
     href: '#contact',
   },
   {
@@ -76,7 +76,7 @@ const conditions = [
       'Indexed universal life (IUL) is a permanent life insurance policy that provides a death benefit and a cash value component.',
       'IUL policies allow policyholders to grow their cash value through the performance of an equity index like S&P 500, with a zero-floor guarantee.',
     ],
-    image: '/images/services/movement.jpg',
+    image: '/images/services/index universal.jpg',
     href: '#contact',
   },
   {
@@ -85,7 +85,7 @@ const conditions = [
       'With education costs rising, finding ways to help our children pay for college is a priority for many of us.',
       'We provide you with solutions where you are in control of your college funds and can plan to pay for your children’s education.',
     ],
-    image: '/images/services/movement.jpg',
+    image: '/images/services/Children College Planning.jpg',
     href: '#contact',
   },
   {
@@ -103,7 +103,7 @@ const conditions = [
       'A fixed indexed annuity is a tax-deferred, long-term financial vehicle that protects your principal when the market drops.',
       'It also provides an opportunity for growth and is designed to deliver guaranteed lifetime income, much like a private pension.',
     ],
-    image: '/images/services/dementia.jpg',
+    image: '/images/services/Indexed Annuities.jpg',
     href: '#contact',
   },
   {
@@ -112,7 +112,7 @@ const conditions = [
       'Choosing the right Health Insurance plan can be overwhelming with so many options and variables.',
       'At Nest4Future, we simplify your decision-making and help you find the right health care insurance solution.',
     ],
-    image: '/images/services/ocd.jpg',
+    image: '/images/services/movement.jpg',
     href: '#contact',
   },
   {
@@ -121,7 +121,7 @@ const conditions = [
       'Long-term care (LTC) supports individuals who can no longer perform everyday activities independently.',
       'We help assess the right LTC coverage based on age, cost estimates, and affordability.',
     ],
-    image: '/images/services/other.jpg',
+    image: '/images/services/Long Term Care.jpg',
     href: '#contact',
   },
   {
@@ -130,7 +130,7 @@ const conditions = [
       'Medicare Advantage plans offer additional benefits beyond Original Medicare.',
       'We help you choose the right Medicare Advantage or Supplement plan to reduce out-of-pocket expenses.',
     ],
-    image: '/images/services/dementia.jpg',
+    image: '/images/services/Medicare.jpg',
     href: '#contact',
   },
 ];
